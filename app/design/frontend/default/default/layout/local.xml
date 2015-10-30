@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <!--
+    Default layout, loads most of the pages
+    -->
+
+    <default >
+
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/custom.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/responsive.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
+            
+        </reference>   
+       <reference name="footer">
+...
+<!-- esta es la línea que tenemos que añadir -->
+<block type="core/template" name="blockid"  before="footer_links" template="blockid/blockid.phtml" as="blockid" />
+...
+</reference>
+ <remove name="footer_links" />
+  <remove name="footer_links2" />
+   <remove name="footer_links_company" />
+  <remove name="blockid" />
+  <remove name="bugs" />
+ 
+
+
+
+        
+
+    </default>
+
+    
+</layout>
